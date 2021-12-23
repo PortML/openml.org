@@ -10,20 +10,21 @@ import pandas as pd
 import json
 import arff
 from urllib.parse import parse_qs, urlparse
-
+from dotenv import load_dotenv
 data_blueprint = Blueprint(
     "data", __name__, static_folder="server/src/client/app/build"
 )
 
 CORS(data_blueprint)
 
-
+load_dotenv('.flaskenv')
 @data_blueprint.route("/data-edit", methods=["GET", "POST"])
 @jwt_required
 def data_edit():
     current_user = get_jwt_identity()
     user = User.query.filter_by(email=current_user).first()
     openml.config.apikey = user.session_hash
+    openml.config.server = os.getenv('PYTHON_SERVER')
     testing = os.environ.get("TESTING")
     if testing:
         openml.config.start_using_configuration_for_example()
@@ -151,13 +152,16 @@ def data_upload():
     """
     Function to upload dataset
     """
+    print("POST reached")
     current_user = get_jwt_identity()
     user = User.query.filter_by(email=current_user).first()
     user_api_key = user.session_hash
-    openml.config.apikey = user.session_hash
+
     testing = os.environ.get("TESTING")
-    if testing:
-        openml.config.start_using_configuration_for_example()
+    openml.config.apikey = user.session_hash
+    openml.config.server = os.getenv('PYTHON_SERVER')
+    # if testing:
+    #     openml.config.start_using_configuration_for_example()
     # openml.config.start_using_configuration_for_example()
 
     print(request)
@@ -177,7 +181,7 @@ def data_upload():
     creator = metadata["creator"]
     contributor = metadata["contributor"]
     collection_date = metadata["collection_date"]
-    licence = metadata["licence"]
+    #licence = metadata["licence"]
     language = metadata["language"]
     # attribute = metadata['attribute']
     def_tar_att = metadata["def_tar_att"]
@@ -222,7 +226,7 @@ def data_upload():
         creator=creator,
         contributor=contributor,
         collection_date=collection_date,
-        licence=licence,
+        licence=None,
         language=language,
         attributes="auto",
         default_target_attribute=def_tar_att,
@@ -244,6 +248,7 @@ def data_tag():
     current_user = get_jwt_identity()
     user = User.query.filter_by(email=current_user).first()
     openml.config.apikey = user.session_hash
+    openml.config.server = os.getenv('PYTHON_SERVER')
     testing = os.environ.get("TESTING")
     if testing:
         openml.config.start_using_configuration_for_example()

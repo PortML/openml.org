@@ -16,7 +16,7 @@ from flask import (  # current_app,; flash,; redirect,; render_template,; url_fo
 blueprint = Blueprint("public", __name__)
 
 CORS(blueprint)
-
+CONFIRMATION=False
 
 @blueprint.route("/signup", methods=["POST"])
 def signupfunc():
@@ -37,7 +37,7 @@ def signupfunc():
         user.remember_code = "0000"
         user.created_on = "0000"
         user.last_login = "0000"
-        user.active = "0"
+        user.active = "1"
         user.first_name = register_obj["first_name"]
         user.last_name = register_obj["last_name"]
         user.company = "0000"
@@ -53,7 +53,8 @@ def signupfunc():
         timestamp = timestamp.strftime("%d %H:%M:%S")
         md5_digest = hashlib.md5(timestamp.encode()).hexdigest()
         user.update_activation_code(md5_digest)
-        confirmation_email(user.email, md5_digest)
+        if CONFIRMATION:
+            confirmation_email(user.email, md5_digest)
         db.session.add(user)
         # db.session.commit()
         # user_ = User.query.filter_by(email=register_obj["email"]).first()
@@ -89,7 +90,8 @@ def confirmation_token():
     md5_digest = hashlib.md5(timestamp.encode()).hexdigest()
     user = User.query.filter_by(email=jobj["email"]).first()
     user.update_activation_code(md5_digest)
-    confirmation_email(user.email, md5_digest)
+    if CONFIRMATION:
+        confirmation_email(user.email, md5_digest)
     # updating user groups here
     user_ = UserGroups(user_id=user.id, group_id=2)
     db.session.merge(user)

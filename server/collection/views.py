@@ -5,13 +5,13 @@ from server.user.models import User
 import openml
 import uuid
 import os
-
+from dotenv import load_dotenv
 collection_bp = Blueprint(
     "collection", __name__, static_folder="server/src/client/app/build"
 )
 
 CORS(collection_bp)
-
+load_dotenv('.flaskenv')
 
 @collection_bp.route("/upload-collection-runs", methods=["POST"])
 @jwt_required
@@ -24,6 +24,7 @@ def upload_collection_runs():
     user = User.query.filter_by(email=current_user).first()
     user_api_key = user.session_hash
     openml.config.apikey = user_api_key
+    openml.config.server = os.environ.get('PYTHON_SERVER')
     # TODO change line below in production
     testing = os.environ.get("TESTING")
     if testing:
@@ -58,6 +59,7 @@ def upload_collection_task():
     user = User.query.filter_by(email=current_user).first()
     user_api_key = user.session_hash
     openml.config.apikey = user_api_key
+    openml.config.server = os.environ.get('PYTHON_SERVER')
     # change line below in testing
     testing = os.environ.get("TESTING")
     if testing:

@@ -34,8 +34,8 @@ def create_dash_app(flask_app):
         root_dir = os.path.abspath(os.sep)
         root_dir = os.getcwd()
         if not os.path.exists(os.path.join(root_dir, "public")):
-            os.system(f"sudo mkdir {root_dir}/public")
-        os.system(f"sudo chmod 777 {root_dir}/public")
+            os.system(f"mkdir {root_dir}/public")
+        os.system(f"chmod 777 {root_dir}/public")
         openml.config.cache_directory = os.path.join(
             root_dir, "public", "python-cache", ".openml", "cache"
         )
@@ -68,7 +68,8 @@ def create_dash_app(flask_app):
     register_callbacks(app, cache)
 
     # Create a temporary cache for data transfer between callbacks - pkl files
-    shutil.rmtree("cache", ignore_errors=True)
-    os.system("sudo mkdir cache")
-    os.system("sudo chmod 777 cache")
+    # shutil.rmtree("cache", ignore_errors=True)
+    # os.system("rm cache")
+    # os.system("mkdir cache")
+    # os.system("chmod 777 cache")
     return app

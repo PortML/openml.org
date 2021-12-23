@@ -104,7 +104,7 @@ function Public() {
       creator: event.target.creator.value,
       contributor: event.target.contributor.value,
       collection_date: event.target.collection_date.value,
-      licence: event.target.licence.value,
+      //licence: event.target.licence.value,
       language: event.target.language.value,
       // attribute: event.target.attribute.value,
       ignore_attribute: event.target.ignore_attribute.value,

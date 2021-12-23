@@ -17,6 +17,7 @@ from server.user.models import User, UserGroups
 from server.utils import confirmation_email
 from werkzeug.utils import secure_filename
 from PIL import Image
+from dotenv import load_dotenv
 from io import BytesIO
 
 user_blueprint = Blueprint(
@@ -26,8 +27,8 @@ user_blueprint = Blueprint(
 CORS(user_blueprint)
 
 blacklist = set()
-
-
+CONFIRMATION = False
+load_dotenv('.flaskenv')
 @jwt.token_in_blacklist_loader
 def check_if_token_in_blacklist(decrypted_token):
     """Checking if token is in blacklist token"""
@@ -114,7 +115,8 @@ def profile():
             timestamp = timestamp.strftime("%d %H:%M:%S")
             md5_digest = hashlib.md5(timestamp.encode()).hexdigest()
             user.update_activation_code(md5_digest)
-            confirmation_email(data["email"], md5_digest)
+            if CONFIRMATION:
+                confirmation_email(data["email"], md5_digest)
             user.update_email(data["email"])
 
         db.session.merge(user)
