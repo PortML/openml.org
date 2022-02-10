@@ -115,7 +115,7 @@ const StyledLink = styled(Link)`
 
 const MoreLink = styled(Link)`
   text-decoration: none;
-  color: ${blue[700]};
+  color: #7369FC;
   margin-top: 10px;
   margin-bottom: 10px;
   display: block;
@@ -130,7 +130,7 @@ const MoreLink = styled(Link)`
 
 const QuickLink = styled(Link)`
   text-decoration: none;
-  color: ${blue[700]};
+  color: #7369FC;
   margin-right: 10px;
   font-weight: 700;
   display: inline-block;
@@ -144,7 +144,7 @@ const QuickLink = styled(Link)`
 
 const MoreLinkExternal = styled(MuiLink)`
   text-decoration: none;
-  color: ${blue[400]};
+  color: #7369FC;
   margin-top: 10px;
   margin-bottom: 10px;
   display: block;
@@ -187,47 +187,62 @@ const FixedIcon = styled(FontAwesomeIcon)`
   left: ${props => props.l}px;
   top: ${props => props.t}px;
 `;
-const GreenFixedIcon = styled(FixedIcon)`
-  color: ${green[400]};
-`;
-const LightGreenFixedIcon = styled(FixedIcon)`
-  color: ${green[50]};
-`;
+// const GreenFixedIcon = styled(FixedIcon)`
+//   color: ${green[400]};
+// `;
+// const LightGreenFixedIcon = styled(FixedIcon)`
+//   color: ${green[50]};
+// `;
 const WhiteFixedIcon = styled(FixedIcon)`
   color: #fff;
 `;
-const RedFixedIcon = styled(FixedIcon)`
-  color: ${red[400]};
+const MainColorFixedIcon = styled(FixedIcon)`
+  color: #2C1D7C;
 `;
-const LightRedFixedIcon = styled(FixedIcon)`
-  color: ${red[50]};
+const AccentColorFixedIcon = styled(FixedIcon)`
+  color: #7369FC;
 `;
-const BlueFixedIcon = styled(FixedIcon)`
-  color: ${blue[400]};
+// const RedFixedIcon = styled(FixedIcon)`
+//   color: ${red[400]};
+// `;
+// const LightRedFixedIcon = styled(FixedIcon)`
+//   color: ${red[50]};
+// `;
+// const BlueFixedIcon = styled(FixedIcon)`
+//   color: ${blue[400]};
+// `;
+// const LightBlueFixedIcon = styled(FixedIcon)`
+//   color: ${blue[50]};
+// `;
+// const AmberFixedIcon = styled(FixedIcon)`
+//   color: ${amber[500]};
+// `;
+// const PurpleFixedIcon = styled(FixedIcon)`
+//   color: ${purple[500]};
+// `;
+// const GreenIcon = styled(FontAwesomeIcon)`
+//   color: ${green[400]};
+// `;
+// const RedIcon = styled(FontAwesomeIcon)`
+//   color: ${red[400]};
+// `;
+// const BlueIcon = styled(FontAwesomeIcon)`
+//   color: ${blue[400]};
+// `;
+// const AmberIcon = styled(FontAwesomeIcon)`
+//   color: ${amber[500]};
+// `;
+// const PurpleIcon = styled(FontAwesomeIcon)`
+//   color: ${purple[500]};
+// `;
+const WhiteIcon = styled(FontAwesomeIcon)`
+  color: #FFF;
 `;
-const LightBlueFixedIcon = styled(FixedIcon)`
-  color: ${blue[50]};
+const MainColorIcon = styled(FontAwesomeIcon)`
+  color: #2C1D7C;
 `;
-const AmberFixedIcon = styled(FixedIcon)`
-  color: ${amber[500]};
-`;
-const PurpleFixedIcon = styled(FixedIcon)`
-  color: ${purple[500]};
-`;
-const GreenIcon = styled(FontAwesomeIcon)`
-  color: ${green[400]};
-`;
-const RedIcon = styled(FontAwesomeIcon)`
-  color: ${red[400]};
-`;
-const BlueIcon = styled(FontAwesomeIcon)`
-  color: ${blue[400]};
-`;
-const AmberIcon = styled(FontAwesomeIcon)`
-  color: ${amber[500]};
-`;
-const PurpleIcon = styled(FontAwesomeIcon)`
-  color: ${purple[500]};
+const AccentColorIcon = styled(FontAwesomeIcon)`
+  color: #7369FC;
 `;
 
 const CoverInput = styled(InputBase)`
@@ -245,12 +260,12 @@ const CoverInput = styled(InputBase)`
     flex: 1;
   }
   .MuiInputBase-input {
-    background: linear-gradient(to right, #5a70cd 0%, #b0a972 100%);
+    background: #2C1D7C;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     &::placeholder {
-      background: linear-gradient(to right, #5a70cd 0%, #8ac788 100%);
+      background: #2C1D7C;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       opacity: 0.9;
@@ -334,8 +349,8 @@ function IntroGraph() {
           ry="20"
           width="160"
           height="32"
-          stroke="#2979ff"
-          fill="#2979ff"
+          stroke="#7369FC"
+          fill="#7369FC"
         />
         <text x="70" y="170" fill="white">
           I shared a new data set
@@ -347,24 +362,24 @@ function IntroGraph() {
           ry="20"
           width="160"
           height="32"
-          stroke="#2979ff"
-          fill="#2979ff"
+          stroke="#7369FC"
+          fill="#7369FC"
         />
         <text x="160" y="210" fill="white">
           I found a better model!
         </text>
         <text x="160" y="62" fill="white">
-          OpenML
+          PortML
         </text>
       </svg>
 
       <WhiteFixedIcon icon="desktop" l="0" t="170" sizept="45" />
       <WhiteFixedIcon icon="laptop" l="300" t="170" sizept="45" />
       <WhiteFixedIcon icon="brain" l="160" t="0" sizept="35" />
-      <LightGreenFixedIcon icon="database" l="40" t="40" sizept="20" />
-      <LightGreenFixedIcon icon="database" l="320" t="40" sizept="20" />
-      <LightBlueFixedIcon icon="cog" l="200" t="80" sizept="20" />
-      <LightRedFixedIcon icon="flask" l="225" t="110" sizept="20" />
+      <WhiteFixedIcon icon="database" l="40" t="40" sizept="20" />
+      <WhiteFixedIcon icon="database" l="320" t="40" sizept="20" />
+      <WhiteFixedIcon icon="cog" l="200" t="80" sizept="20" />
+      <WhiteFixedIcon icon="flask" l="225" t="110" sizept="20" />
     </div>
   );
 }
@@ -380,23 +395,23 @@ function OpenMLGraph() {
         height: 250
       }}
     >
-      <GreenFixedIcon icon="database" l="0" t="50" />
-      <GreenFixedIcon icon="database" l="0" t="90" />
-      <GreenFixedIcon icon="database" l="0" t="130" />
-      <AmberFixedIcon icon="flag" l="90" t="50" />
-      <AmberFixedIcon icon="flag" l="90" t="90" />
-      <AmberFixedIcon icon="flag" l="90" t="130" />
-      <AmberFixedIcon icon="flag" l="90" t="170" />
-      <RedFixedIcon icon="flask" l="180" t="10" />
-      <RedFixedIcon icon="flask" l="180" t="50" />
-      <RedFixedIcon icon="flask" l="180" t="90" />
-      <RedFixedIcon icon="flask" l="180" t="130" />
-      <RedFixedIcon icon="flask" l="180" t="170" />
-      <RedFixedIcon icon="flask" l="180" t="210" />
-      <BlueFixedIcon icon="cog" l="270" t="50" />
-      <BlueFixedIcon icon="cog" l="270" t="90" />
-      <BlueFixedIcon icon="cog" l="270" t="130" />
-      <BlueFixedIcon icon="cog" l="270" t="170" />
+      <MainColorFixedIcon icon="database" l="0" t="50" />
+      <MainColorFixedIcon icon="database" l="0" t="90" />
+      <MainColorFixedIcon icon="database" l="0" t="130" />
+      <MainColorFixedIcon icon="flag" l="90" t="50" />
+      <MainColorFixedIcon icon="flag" l="90" t="90" />
+      <MainColorFixedIcon icon="flag" l="90" t="130" />
+      <MainColorFixedIcon icon="flag" l="90" t="170" />
+      <MainColorFixedIcon icon="flask" l="180" t="10" />
+      <MainColorFixedIcon icon="flask" l="180" t="50" />
+      <MainColorFixedIcon icon="flask" l="180" t="90" />
+      <MainColorFixedIcon icon="flask" l="180" t="130" />
+      <MainColorFixedIcon icon="flask" l="180" t="170" />
+      <MainColorFixedIcon icon="flask" l="180" t="210" />
+      <MainColorFixedIcon icon="cog" l="270" t="50" />
+      <MainColorFixedIcon icon="cog" l="270" t="90" />
+      <MainColorFixedIcon icon="cog" l="270" t="130" />
+      <MainColorFixedIcon icon="cog" l="270" t="170" />
       <svg style={{ minHeight: 250 }}>
         <line
           x1="35"
@@ -527,15 +542,15 @@ function ReproGraph() {
           marginTop: 60
         }}
       >
-        <PurpleFixedIcon icon="cogs" sizept="20" l="20" t="10" />
-        <BlueFixedIcon icon="cog" sizept="20" l="100" t="10" />
-        <BlueFixedIcon icon="cog" sizept="20" l="100" t="50" />
-        <AmberFixedIcon icon="flag" sizept="20" l="65" t="50" />
-        <RedFixedIcon icon="flask" sizept="20" l="160" t="50" />
-        <BlueFixedIcon icon="cog" sizept="20" l="220" t="50" />
-        <AmberFixedIcon icon="flag" sizept="20" l="255" t="50" />
-        <BlueFixedIcon icon="cog" sizept="20" l="220" t="90" />
-        <PurpleFixedIcon icon="cogs" sizept="20" l="300" t="90" />
+        <MainColorFixedIcon icon="cogs" sizept="20" l="20" t="10" />
+        <MainColorFixedIcon icon="cog" sizept="20" l="100" t="10" />
+        <MainColorFixedIcon icon="cog" sizept="20" l="100" t="50" />
+        <MainColorFixedIcon icon="flag" sizept="20" l="65" t="50" />
+        <MainColorFixedIcon icon="flask" sizept="20" l="160" t="50" />
+        <MainColorFixedIcon icon="cog" sizept="20" l="220" t="50" />
+        <MainColorFixedIcon icon="flag" sizept="20" l="255" t="50" />
+        <MainColorFixedIcon icon="cog" sizept="20" l="220" t="90" />
+        <MainColorFixedIcon icon="cogs" sizept="20" l="300" t="90" />
 
         <svg style={{ minWidth: 345, minHeight: 150 }}>
           <defs>
@@ -644,22 +659,19 @@ class Cover extends React.Component {
     return (
       <MainContext.Consumer>
         {context => (
-          <Container maxWidth="md">
+          <Container maxWidth="md" >
             <Grid
               container
               spacing={10}
               style={{ height: "500", paddingTop: 50, marginBottom: 70 }}
             >
               <Grid item xs={12} md={6}>
-                <OpenMLTitle>OpenML</OpenMLTitle>
+                <OpenMLTitle>PortML</OpenMLTitle>
                 <OpenMLSubTitle>
-                  A worldwide machine learning lab
+                  Machine Learning, better, faster, together
                 </OpenMLSubTitle>
                 <OpenMLSubSubTitle>
-                  Machine learning research should be easily accessible and
-                  reusable. OpenML is an open platform for sharing datasets,
-                  algorithms, and experiments - to learn how to learn better,
-                  together.
+                  Organise and scale your machine learning activities to stay relevant in a data driven world.
                 </OpenMLSubSubTitle>
               </Grid>
               <Grid item xs={12} md={6}>
@@ -668,7 +680,7 @@ class Cover extends React.Component {
               <Grid item xs={12} style={{ marginTop: 20 }}>
                 <FormControl style={{ display: "inline" }}>
                   <CoverInput
-                    placeholder="Search OpenML"
+                    placeholder="Search PortML"
                     onKeyPress={event => {
                       if (event.charCode === 13) {
                         event.preventDefault();
@@ -699,7 +711,7 @@ class Cover extends React.Component {
                   <WhiteText>
                     to start tracking and sharing your own work.
                   </WhiteText>
-                  <WhiteText>OpenML is open and free to use.</WhiteText>
+                  {/* <WhiteText>OpenML is open and free to use.</WhiteText> */}
                 </div>
               </Grid>
             </Grid>
@@ -724,7 +736,7 @@ class Cover extends React.Component {
                     <ListIcon
                       icon="database"
                       size="2x"
-                      style={{ color: green[400], marginBottom: 10 }}
+                      style={{ color: "#2C1D7C", marginBottom: 10 }}
                     />
                     <br />
                     AI-ready data
@@ -740,7 +752,7 @@ class Cover extends React.Component {
                     <ListIcon
                       icon="cogs"
                       size="2x"
-                      style={{ color: blue[400], marginBottom: 10 }}
+                      style={{ color: "#2C1D7C", marginBottom: 10 }}
                     />
                     <br />
                     ML library integrations
@@ -756,7 +768,7 @@ class Cover extends React.Component {
                     <ListIcon
                       icon="flask"
                       size="2x"
-                      style={{ color: red[400], marginBottom: 10 }}
+                      style={{ color: "#2C1D7C", marginBottom: 10 }}
                     />
                     <br />A treasure trove of ML results
                   </Typography>
@@ -875,7 +887,7 @@ class Cover extends React.Component {
 
                   <ListItem>
                     <ListItemIcon>
-                      <GreenIcon icon="database" size="2x" fixedWidth />
+                      <MainColorIcon icon="database" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       For every{" "}
@@ -891,7 +903,7 @@ class Cover extends React.Component {
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
-                      <AmberIcon icon="flag" size="2x" fixedWidth />
+                      <MainColorIcon icon="flag" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       For every{" "}
@@ -907,7 +919,7 @@ class Cover extends React.Component {
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
-                      <RedIcon icon="flask" size="2x" fixedWidth />
+                      <MainColorIcon icon="flask" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       For every{" "}
@@ -923,7 +935,7 @@ class Cover extends React.Component {
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
-                      <BlueIcon icon="cog" size="2x" fixedWidth />
+                      <MainColorIcon icon="cog" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       For every{" "}
@@ -967,7 +979,7 @@ class Cover extends React.Component {
                   </Typography>
                   <ListItem>
                     <ListItemIcon>
-                      <RedIcon icon="code-branch" size="2x" fixedWidth />
+                      <MainColorIcon icon="code-branch" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       OpenML records exactly which datasets and library versions
@@ -976,7 +988,7 @@ class Cover extends React.Component {
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
-                      <PurpleIcon icon="sliders-h" size="2x" fixedWidth />
+                      <MainColorIcon icon="sliders-h" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       For every experiment, the exact pipeline structure,
@@ -986,7 +998,7 @@ class Cover extends React.Component {
                   </ListItem>
                   <ListItem>
                     <ListItemIcon>
-                      <BlueIcon icon="sync" size="2x" fixedWidth />
+                      <MainColorIcon icon="sync" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
                       OpenML{" "}

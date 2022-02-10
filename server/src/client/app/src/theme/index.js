@@ -112,10 +112,10 @@ const lightVariant = {
   },
   sidebar: {
     color: grey[900],
-    background: "#FFF",
+    background: "#2C1D7C",
     header: {
       color: "#FFF",
-      background: "#FFF",
+      background: "#2C1D7C",
       brand: {
         color: "#FFFFFF"
       }
@@ -160,10 +160,10 @@ const darkVariant = {
   },
   sidebar: {
     color: grey[200],
-    background: "#1B2430",
+    background: "#2C1D7C",
     header: {
       color: grey[200],
-      background: "#1B2430",
+      background: "#2C1D7C",
       brand: {
         color: blue[500]
       }

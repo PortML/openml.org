@@ -53,37 +53,70 @@ const API = async(() => import("../pages/docs/API"));
 // Search
 const SearchPanel = async(() => import("../pages/search/SearchPanel"));
 
+// const GreenMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: green[400]
+// });
+// const YellowMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: yellow[700]
+// });
+// const BlueMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: blue[800]
+// });
+// const RedMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: red[400]
+// });
+// const PurpleMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: purple[400]
+// });
+// const PinkMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: pink[400]
+// });
+// const OrangeMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: orange[400]
+// });
+// const GreyMenuIcon = styled(FontAwesomeIcon)({
+//   cursor: "pointer",
+//   color: grey[400]
+// });
+
 const GreenMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: green[400]
+  color: "#FFFFFF"
 });
 const YellowMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: yellow[700]
+  color: "#FFFFFF"
 });
 const BlueMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: blue[800]
+  color: "#FFFFFF"
 });
 const RedMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: red[400]
+  color: "#FFFFFF"
 });
 const PurpleMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: purple[400]
+  color: "#FFFFFF"
 });
 const PinkMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: pink[400]
+  color: "#FFFFFF"
 });
 const OrangeMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: orange[400]
+  color: "#FFFFFF"
 });
 const GreyMenuIcon = styled(FontAwesomeIcon)({
   cursor: "pointer",
-  color: grey[400]
+  color: "#FFFFFF"
 });
 
 const dataRoutes = {
@@ -212,7 +245,8 @@ const coverRoutes = {
   id: "Cover",
   path: "/",
   component: Cover,
-  background: "Gradient"
+  background: "Cover"
+  // background: "Gradient"
 };
 
 const measureRoutes = {
@@ -383,13 +417,13 @@ export const mainRoutes = [
   profileRoutes,
   measureRoutes,
   // peopleRoutes,
-  documentationRoutes,
-  blogRoutes,
-  apiRoutes,
-  contributeRoutes,
-  meetRoutes,
-  teamRoutes,
-  termsRoutes
+  // documentationRoutes,
+  // blogRoutes,
+  // apiRoutes,
+  // contributeRoutes,
+  // meetRoutes,
+  // teamRoutes,
+  // termsRoutes
 ];
 
 export const clearRoutes = [authRoutes];
@@ -404,13 +438,13 @@ const defaultRoutes = [
   taskTypeRoutes,
   measureRoutes,
   // peopleRoutes,
-  documentationRoutes,
-  blogRoutes,
-  apiRoutes,
-  contributeRoutes,
-  meetRoutes,
-  teamRoutes,
-  termsRoutes
+  // documentationRoutes,
+  // blogRoutes,
+  // apiRoutes,
+  // contributeRoutes,
+  // meetRoutes,
+  // teamRoutes,
+  // termsRoutes
 ];
 
 

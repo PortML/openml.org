@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${props =>
-      window.location.pathname === "/" ? "#fff" : props.theme.body.background};
+    window.location.pathname === "/" ? "#fff" : props.theme.body.background};
   }
 `;
 
@@ -35,8 +35,8 @@ const Root = styled.div`
   display: flex;
   min-height: 100vh;
   background: ${props =>
-    props.bg === "Gradient"
-      ? "linear-gradient(217deg, rgba(255,0,0,1), rgba(255,0,0,0) 70.71%), linear-gradient(336deg, rgba(0,200,0,1), rgba(0,200,0,0) 70.71%), linear-gradient(127deg, rgba(0,0,255,1), rgba(0,0,255,0) 70.71%)"
+    props.bg === "Cover"
+      ? "linear-gradient(180deg, rgb(44,29,124), rgb(44,29,124, 0.9) 70.71%)"
       : "none"};
   background-size: 100vw ${props => (props.width <= 960 ? "900px" : "600px")};
   background-repeat: no-repeat;
@@ -54,10 +54,10 @@ const Paper = styled(MuiPaper)(spacing);
 const MainContent = styled(Paper)`
   flex: 1;
   background: ${props =>
-    props.bg === "Gradient" ? "transparent" : props.theme.body.background};
+    props.bg === "Cover" ? "transparent" : props.theme.body.background};
   box-shadow ${props =>
-    props.bg === "Gradient" ? "none" : props.theme.body.background};
-  padding: ${props => (props.bg === "Gradient" ? "10px" : "0")};
+    props.bg === "Cover" ? "none" : props.theme.body.background};
+  padding: ${props => (props.bg === "Cover" ? "10px" : "0")};
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     flex: none;

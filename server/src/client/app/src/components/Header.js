@@ -49,12 +49,12 @@ const IconButton = styled(MuiIconButton)`
 
 const Search = styled.div`
   ${props =>
-    props.bg === "Gradient" &&
+    props.bg === "Cover" &&
     css`
       background: transparent;
     `}
   ${props =>
-    props.bg !== "Gradient" &&
+    props.bg !== "Cover" &&
     props.searchcolor &&
     props.currenttheme === 1 &&
     css`
@@ -67,11 +67,11 @@ const Search = styled.div`
 
   &:hover {
     background-color: ${props =>
-    props.bg === "Gradient"
+    props.bg === "Cover"
       ? "transparent"
       : darken(0.05, props.theme.header.background)};
     ${props =>
-    props.bg !== "Gradient" &&
+    props.bg !== "Cover" &&
     props.searchcolor &&
     props.currenttheme === 1 &&
     css`
@@ -115,7 +115,7 @@ const Input = styled(InputBase)`
 
   > input {
     color: ${props =>
-    props.bg === "Gradient" ? "white" : props.theme.header.search.color};
+    props.bg === "Cover" ? "white" : props.theme.header.search.color};
     padding-top: ${props => props.theme.spacing(2.5)}px;
     padding-right: ${props => props.theme.spacing(2.5)}px;
     padding-bottom: ${props => props.theme.spacing(2.5)}px;
@@ -125,7 +125,7 @@ const Input = styled(InputBase)`
 
   > input::placeholder {
     color: ${props =>
-    props.bg === "Gradient" ? "white" : props.theme.header.search.color};
+    props.bg === "Cover" ? "white" : props.theme.header.search.color};
     opacity: 0.8;
   }
 `;
@@ -146,14 +146,14 @@ const StyledLink = styled(Link)`
 
 const WhiteIcon = styled(FontAwesomeIcon)`
   color: ${props =>
-    props.bg === "Gradient" ? "white" : props.theme.header.color};
+    props.bg === "Cover" ? "white" : props.theme.header.color};
 `;
 
 const UserButton = styled(Button)`
   display: ${props => (props.bg === "" ? "none" : "inline-block")};
   color: ${props =>
-    props.bg === "Gradient" || props.currenttheme === 1 ? "white" : "inherit"};
-  border-color: ${props => (props.bg === "Gradient" ? "white" : "inherit")};
+    props.bg === "Cover" || props.currenttheme === 1 ? "white" : "inherit"};
+  border-color: ${props => (props.bg === "Cover" ? "white" : "inherit")};
 
   ${props => props.theme.breakpoints.up("md")} {
     display: inline-block;
@@ -161,7 +161,7 @@ const UserButton = styled(Button)`
 `;
 const SearchButton = styled(Button)`
   color: ${props =>
-    props.bg === "Gradient" || props.theme === 1 ? "white" : "inherit"};
+    props.bg === "Cover" || props.theme === 1 ? "white" : "inherit"};
 `;
 const SlimCardHeader = styled(CardHeader)({
   padding: 0,
@@ -258,46 +258,46 @@ class UserMenu extends Component {
                 </StyledLink>
               </React.Fragment>
             ) : (
-                <React.Fragment>
-                  <IconButton
-                    aria-owns={newOpen ? "menu-new" : undefined}
-                    aria-haspopup="true"
-                    onClick={this.toggleNewMenu}
-                    color="inherit"
-                  >
-                    <WhiteIcon
-                      bg={this.props.bg}
-                      icon="plus"
-                      style={{
-                        height: 20,
-                        width: 20
-                      }}
-                    />
-                  </IconButton>
-                  <IconButton
-                    aria-owns={open ? "menu-appbar" : undefined}
-                    aria-haspopup="true"
-                    onClick={this.toggleMenu}
-                    color="inherit"
-                  >
-                    <SlimCardHeader
-                      avatar={
-                        <Avatar
-                          src={context.userImage}
-                          style={{
-                            height: 40,
-                            width: 40,
-                            marginRight: -16,
-                            backgroundColor: avatarColor
-                          }}
-                        >
-                          {context.userInitials}
-                        </Avatar>
-                      }
-                    />
-                  </IconButton>
-                </React.Fragment>
-              )}
+              <React.Fragment>
+                <IconButton
+                  aria-owns={newOpen ? "menu-new" : undefined}
+                  aria-haspopup="true"
+                  onClick={this.toggleNewMenu}
+                  color="inherit"
+                >
+                  <WhiteIcon
+                    bg={this.props.bg}
+                    icon="plus"
+                    style={{
+                      height: 20,
+                      width: 20
+                    }}
+                  />
+                </IconButton>
+                <IconButton
+                  aria-owns={open ? "menu-appbar" : undefined}
+                  aria-haspopup="true"
+                  onClick={this.toggleMenu}
+                  color="inherit"
+                >
+                  <SlimCardHeader
+                    avatar={
+                      <Avatar
+                        src={context.userImage}
+                        style={{
+                          height: 40,
+                          width: 40,
+                          marginRight: -16,
+                          backgroundColor: avatarColor
+                        }}
+                      >
+                        {context.userInitials}
+                      </Avatar>
+                    }
+                  />
+                </IconButton>
+              </React.Fragment>
+            )}
             <StyledMenu
               id="menu-new"
               anchorEl={anchorNewMenu}
@@ -405,19 +405,19 @@ class UserMenu extends Component {
 
 const FlexAppBar = styled(AppBar)`
   ${props =>
-    props.bg === "Gradient" &&
+    props.bg === "Cover" &&
     css`
       background: transparent;
     `}
   ${props =>
-    props.bg !== "Gradient" &&
+    props.bg !== "Cover" &&
     props.searchcolor &&
     props.currenttheme === 1 &&
     css`
       background-color: ${props => props.searchcolor};
     `}
   box-shadow: ${props =>
-    props.bg === "Gradient" || props.searchcolor ? "none" : ""};
+    props.bg === "Cover" || props.searchcolor ? "none" : ""};
 `;
 
 const Header = ({ onDrawerToggle, bg, routes, loggedIn }) => (
@@ -501,8 +501,8 @@ const Header = ({ onDrawerToggle, bg, routes, loggedIn }) => (
                     {context.searchActive ? (
                       <FontAwesomeIcon icon="times" />
                     ) : (
-                        "Search"
-                      )}
+                      "Search"
+                    )}
                   </SearchButton>
                 </Box>
               </Grid>
