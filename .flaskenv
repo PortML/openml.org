@@ -13,4 +13,4 @@ JWT_SECRET_KEY=abcd
 TESTING=True
 SERVER_URL=http://localhost:5000/
 REDIRECT_URL=http://localhost:5000
-PYTHON_SERVER=http://localhost/api/v1/xml/
+PYTHON_SERVER=http://website/api/v1/xml/
