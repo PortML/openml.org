@@ -11,9 +11,9 @@ RUN pip3 install python-dotenv
 
 COPY . /app
 WORKDIR /server/src/client/app
-RUN npm install
+RUN npm install --legacy-peer-deps
 WORKDIR /app
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build --prefix server/src/client/app/
 CMD ["flask", "run", "--host", "0.0.0.0"]
 #   "--host", "0.0.0.0"
