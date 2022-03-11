@@ -307,7 +307,7 @@ class Sidebar extends React.Component {
 
   // Fetch the document counts for all OpenML entity types
   countUpdate = async () => {
-    const ELASTICSEARCH_SERVER = "https://www.openml.org/es/";
+    const ELASTICSEARCH_SERVER = "http://localhost:9200/";
 
     const data = {
       size: 0,
