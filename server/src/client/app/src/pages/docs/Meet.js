@@ -153,17 +153,16 @@ export default class GetInvolved extends React.Component {
           <Card>
             <CardActionArea>
               <CardMedia
-                style={{ height: 240 }}
-                image="https://korenbrothers.com/wp-content/uploads/2017/05/SCHLOSS-DAGSTUHL-Wadern-Philippe-Koren-PK_SW140-1.jpg"
+                style={{ height: 140 }}
+                image="https://www.holland.com/upload_mm/b/2/7/69095_fullimage_18-immersive-decelerator-pani-bvof-3.jpg"
                 title="Hackathon"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  2022 Spring Hackathon - 20-25 March, Schloss Dagstuhl, Wadern, Germany
+                  2020 Fall Hackathon - 26-30 October, Virtual
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Join us in Dagstuhl Castle, a wonderful location for advancing computer science research in the hills of Saarland, to work
-                  on the next generation of OpenML.
+                  Due to the covid-19 regulations, this will be a virtual event, but equally fun. We will participate in #Hacktoberfest and set up a virtual meeting place in GatherTown.
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -171,14 +170,15 @@ export default class GetInvolved extends React.Component {
               <Button
                 size="small"
                 color="primary"
-                href="https://forms.gle/z48UqHt9FYUmz3w88"
+                href="https://forms.gle/zPcE2uyfXHNafy1b7"
               >
                 Register (free)
               </Button>
               <Button
                 size="small"
                 color="primary"
-                href="https://www.dagstuhl.de/en/about-dagstuhl/arrival/"
+                disabled
+                href="https://www.ecm.bwl.uni-muenchen.de/service/downloads/wegbeschreibungfreimann.pdf"
               >
                 Getting there
               </Button>
