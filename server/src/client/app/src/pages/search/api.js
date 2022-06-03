@@ -58,7 +58,7 @@ export function getProperty(obj, param) {
   }
 }
 
-const ELASTICSEARCH_SERVER = "http://localhost:9200/";
+const ELASTICSEARCH_SERVER = process.env.REACT_APP_ES_URL || "http://localhost:9200/";
 
 // general search
 export function search(
@@ -158,7 +158,7 @@ export function search(
 
 //get specific item
 export function getItem(type, itemId) {
-  return fetch(ELASTICSEARCH_SERVER + "/" + type + "/" + type + "/" + itemId, {
+  return fetch(ELASTICSEARCH_SERVER + type + "/" + type + "/" + itemId, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json"
@@ -171,8 +171,8 @@ export function getItem(type, itemId) {
       if (data["found"] !== true) {
         throw Error(
           'No task with id "' +
-            itemId +
-            '" found. It may have been removed or renamed'
+          itemId +
+          '" found. It may have been removed or renamed'
         );
       }
       return Promise.resolve(data["_source"]);
@@ -181,7 +181,7 @@ export function getItem(type, itemId) {
 
 // Not used?
 export function getList(itemId) {
-  return fetch(ELASTICSEARCH_SERVER + "/data/data/list/tag/" + itemId, {
+  return fetch(ELASTICSEARCH_SERVER + "data/data/list/tag/" + itemId, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json"
@@ -194,8 +194,8 @@ export function getList(itemId) {
       if (data["found"] !== true) {
         throw Error(
           'No task with id "' +
-            itemId +
-            '" found. It may have been removed or renamed'
+          itemId +
+          '" found. It may have been removed or renamed'
         );
       }
       return Promise.resolve(data["_source"]);
