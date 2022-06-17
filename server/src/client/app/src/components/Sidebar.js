@@ -619,47 +619,6 @@ class Sidebar extends React.Component {
                         </Tooltip>
                       )}
                     </Grid>
-                    <Grid item>
-                      {context.currentTheme === 0 ? (
-                        <Tooltip
-                          title="Switch to Light theme"
-                          placement="top-start"
-                        >
-                          <div style={{ display: "inline-block" }}>
-                            <LightIcon
-                              icon="moon"
-                              size="lg"
-                              onClick={() => context.setTheme(1)}
-                            />
-                            <Typography
-                              display="inline"
-                              style={{ paddingLeft: 10 }}
-                            >
-                              Dark
-                            </Typography>
-                          </div>
-                        </Tooltip>
-                      ) : (
-                        <Tooltip
-                          title="Switch to Dark theme"
-                          placement="top-start"
-                        >
-                          <div style={{ display: "inline-block" }}>
-                            <DarkIcon
-                              icon="sun"
-                              size="lg"
-                              onClick={() => context.setTheme(0)}
-                            />
-                            <Typography
-                              display="inline"
-                              style={{ paddingLeft: 10 }}
-                            >
-                              Light
-                            </Typography>
-                          </div>
-                        </Tooltip>
-                      )}
-                    </Grid>
                   </Grid>
                 )}
               </MainContext.Consumer>

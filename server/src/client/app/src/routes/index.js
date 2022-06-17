@@ -368,7 +368,8 @@ const teamRoutes = {
   path: "/about",
   icon: <OrangeMenuIcon icon="users" fixedWidth />,
   component: About,
-  color: orange[400]
+  color: orange[400],
+  header: "About",
 };
 
 export const mainRoutes = [
@@ -383,11 +384,11 @@ export const mainRoutes = [
   profileRoutes,
   measureRoutes,
   // peopleRoutes,
-  documentationRoutes,
-  blogRoutes,
-  apiRoutes,
-  contributeRoutes,
-  meetRoutes,
+  // documentationRoutes,
+  // blogRoutes,
+  // apiRoutes,
+  // contributeRoutes,
+  // meetRoutes,
   teamRoutes,
   termsRoutes
 ];
@@ -404,11 +405,11 @@ const defaultRoutes = [
   taskTypeRoutes,
   measureRoutes,
   // peopleRoutes,
-  documentationRoutes,
-  blogRoutes,
-  apiRoutes,
-  contributeRoutes,
-  meetRoutes,
+  // documentationRoutes,
+  // blogRoutes,
+  // apiRoutes,
+  // contributeRoutes,
+  // meetRoutes,
   teamRoutes,
   termsRoutes
 ];
