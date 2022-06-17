@@ -354,7 +354,7 @@ function IntroGraph() {
           I found a better model!
         </text>
         <text x="160" y="62" fill="white">
-          OpenML
+          PortML
         </text>
       </svg>
 
@@ -650,25 +650,23 @@ class Cover extends React.Component {
               spacing={10}
               style={{ height: "500", paddingTop: 50, marginBottom: 70 }}
             >
-              <Grid item xs={12} md={6}>
-                <OpenMLTitle>OpenML</OpenMLTitle>
+              <Grid item xs={12} md={7}>
+                <OpenMLTitle>PortML</OpenMLTitle>
                 <OpenMLSubTitle>
-                  A worldwide machine learning lab
+                  A managed platform for securely sharing datasets, algorithms and experiments
                 </OpenMLSubTitle>
                 <OpenMLSubSubTitle>
-                  Machine learning research should be easily accessible and
-                  reusable. OpenML is an open platform for sharing datasets,
-                  algorithms, and experiments - to learn how to learn better,
-                  together.
+                  Machine Learning, better, faster, together.
+                  Organise and scale your machine learning activities to stay relevant in a data driven world.
                 </OpenMLSubSubTitle>
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} md={5}>
                 <IntroGraph />
               </Grid>
               <Grid item xs={12} style={{ marginTop: 20 }}>
                 <FormControl style={{ display: "inline" }}>
                   <CoverInput
-                    placeholder="Search OpenML"
+                    placeholder="Search PortML"
                     onKeyPress={event => {
                       if (event.charCode === 13) {
                         event.preventDefault();
@@ -699,7 +697,7 @@ class Cover extends React.Component {
                   <WhiteText>
                     to start tracking and sharing your own work.
                   </WhiteText>
-                  <WhiteText>OpenML is open and free to use.</WhiteText>
+                  {/* <WhiteText>OpenML is open and free to use.</WhiteText> */}
                 </div>
               </Grid>
             </Grid>
@@ -851,10 +849,10 @@ class Cover extends React.Component {
                     value={rExample}
                   />
                 </Grid>
-                <MoreLink to="/api" style={{ fontSize: "1.1em" }}>
+                {/* <MoreLink to="/api" style={{ fontSize: "1.1em" }}>
                   Learn more about the OpenML APIs{" "}
                   <ListIcon icon="arrow-right" style={{ marginLeft: 5 }} />
-                </MoreLink>
+                </MoreLink> */}
               </Grid>
 
               <Grid
@@ -941,15 +939,15 @@ class Cover extends React.Component {
                       .
                     </ListItemText>
                   </ListItem>
-                  <MoreLinkExternal
+                  {/* <MoreLinkExternal
                     href="https://docs.openml.org"
                     target="_blank"
                     style={{ fontSize: "1.1em" }}
                     rel="noreferrer"
                   >
-                    Learn how OpenML works{" "}
+                    Learn how PortML works{" "}
                     <ListIcon icon="arrow-right" style={{ marginLeft: 5 }} />
-                  </MoreLinkExternal>
+                  </MoreLinkExternal> */}
                 </Grid>
               </Grid>
 
@@ -970,7 +968,7 @@ class Cover extends React.Component {
                       <RedIcon icon="code-branch" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
-                      OpenML records exactly which datasets and library versions
+                      PortML records exactly which datasets and library versions
                       are used, so that nothing gets lost.
                     </ListItemText>
                   </ListItem>
@@ -989,7 +987,7 @@ class Cover extends React.Component {
                       <BlueIcon icon="sync" size="2x" fixedWidth />
                     </ListItemIcon>
                     <ListItemText>
-                      OpenML{" "}
+                      PortML{" "}
                       <span style={{ color: "blue", fontWeigth: "400" }}>
                         <b>flows</b>
                       </span>{" "}
@@ -998,7 +996,7 @@ class Cover extends React.Component {
                       verify results.
                     </ListItemText>
                   </ListItem>
-                  <MoreLinkExternal
+                  {/* <MoreLinkExternal
                     href="https://openml.github.io/blog/"
                     target="_blank"
                     style={{ fontSize: "1.1em" }}
@@ -1006,7 +1004,7 @@ class Cover extends React.Component {
                   >
                     Read stories{" "}
                     <ListIcon icon="arrow-right" style={{ marginLeft: 5 }} />
-                  </MoreLinkExternal>
+                  </MoreLinkExternal> */}
                 </Grid>
 
                 <Grid item xs={12} md={6}>
@@ -1018,8 +1016,8 @@ class Cover extends React.Component {
                 Learning to learn
               </CoverTitle>
               <CoverSubTitle>
-                Run systematic benchmarks, large-scale experiments, learn from
-                previous experiments, and automate machine learning itself.
+                PortML is build on top of OpenML making it as easy to use as OpenML and securing your data.
+                Run systematic benchmarks, large-scale experiments, learn from previous experiments, and automate machine learning itself.
               </CoverSubTitle>
               <Grid
                 container
@@ -1228,98 +1226,10 @@ class Cover extends React.Component {
               </MoreLinkExternal>
 
               <CoverTitle variant="h4" gutterBottom>
-                Join OpenML
+                Partners
               </CoverTitle>
               <CoverSubTitle>
-                Join a vibrant ecosystem of machine learning researchers and
-                enthousiasts.
-              </CoverSubTitle>
-              <Grid
-                container
-                spacing={3}
-                style={{
-                  paddingTop: 20
-                }}
-              >
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h5" style={{ marginBottom: 15 }}>
-                    <ListIcon
-                      icon="user-graduate"
-                      size="2x"
-                      style={{ color: red[400], marginBottom: 10 }}
-                    />
-                    <br />
-                    Machine learning experts
-                  </Typography>
-                  <Paragraph>
-                    Share your work, show how it's done, and track how often it
-                    is viewed and reused
-                  </Paragraph>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h5" style={{ marginBottom: 15 }}>
-                    <ListIcon
-                      icon="user-shield"
-                      size="2x"
-                      style={{ color: green[400], marginBottom: 10 }}
-                    />
-                    <br />
-                    Data owners
-                  </Typography>
-                  <Paragraph>
-                    Share your data to challenge and collaborate with the
-                    machine learning community
-                  </Paragraph>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h5" style={{ marginBottom: 15 }}>
-                    <ListIcon
-                      icon="user-cog"
-                      size="2x"
-                      style={{ color: blue[400], marginBottom: 10 }}
-                    />
-                    <br />
-                    Algorithm developers
-                  </Typography>
-                  <Paragraph>
-                    Integrate your tools with OpenML to easily import and export
-                    data and experiments
-                  </Paragraph>
-                </Grid>
-                <Grid item xs={12} md={3}>
-                  <Typography variant="h5" style={{ marginBottom: 15 }}>
-                    <ListIcon
-                      icon="user-ninja"
-                      size="2x"
-                      style={{ color: purple[400], marginBottom: 10 }}
-                    />
-                    <br />
-                    Software engineers
-                  </Typography>
-                  <Paragraph>
-                    OpenML is open source, get involved and make it even better
-                    and more useful
-                  </Paragraph>
-                </Grid>
-              </Grid>
-              <MoreLink to="/contribute" style={{ fontSize: "1.1em" }}>
-                Learn how to contribute to OpenML{" "}
-                <ListIcon icon="arrow-right" style={{ marginLeft: 5 }} />
-              </MoreLink>
-
-              <CoverTitle variant="h4" gutterBottom>
-                Support OpenML
-              </CoverTitle>
-              <CoverSubTitle>
-                We gratefully acknowledge the support from our sponsors and
-                supporting organizations.
-                <MoreLink
-                  to="/contribute"
-                  style={{ color: red[500], display: "inline", marginLeft: 5 }}
-                >
-                  Become a sponsor
-                  <ListIcon icon="heart" style={{ marginLeft: 5 }} />{" "}
-                </MoreLink>
+                PortML partners with the following companies.
               </CoverSubTitle>
               <Grid
                 container
@@ -1334,18 +1244,17 @@ class Cover extends React.Component {
                 }}
               >
                 {" "}
-                <Grid item xs={12} sm={6} md={4}>
+                <Grid item xs={12} sm={6} md={4}
+                  style={{
+                    marginBottom: 100,
+                    textAlign: "center"
+                  }}
+                >
                   <img src="logo-tue.png" height="50" alt="TU/e" />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <img src="logo-amazon.svg" height="40" alt="Amazon Science" />
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <img src="logo-NWO.jpg" height="70" alt="NWO" />
                 </Grid>
               </Grid>
 
-              <CoverTitle variant="h4" gutterBottom>
+              {/* <CoverTitle variant="h4" gutterBottom>
                 Get started now
               </CoverTitle>
               <Grid
@@ -1384,10 +1293,11 @@ class Cover extends React.Component {
                 <Grid item xs={4} md={3}>
                   <ContactChipFull link="/about" icon="users" text="About Us" />
                 </Grid>
-              </Grid>
+              </Grid> */}
             </Grid>
           </Container>
-        )}
+        )
+        }
       </MainContext.Consumer>
     );
   }
