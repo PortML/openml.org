@@ -365,9 +365,9 @@ const termsRoutes = {
 
 const teamRoutes = {
   id: "About us",
-  path: "/about",
+  path: "https://portml.com/company/",
   icon: <OrangeMenuIcon icon="users" fixedWidth />,
-  component: About,
+  // component: About,
   color: orange[400],
   header: "About",
 };

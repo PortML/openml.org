@@ -233,7 +233,7 @@ class App extends React.Component {
           updateType: "results",
           startCount: results.length
         },
-        this.log("Search results changed. Total: "+results.length)
+        this.log("Search results changed. Total: " + results.length)
       );
     },
     setSubResults: (counts, results) => {
@@ -286,7 +286,7 @@ class App extends React.Component {
           if (this.state[key] !== value && key !== "id") {
             qchanged = true;
           }
-          if (key === "type" && this.state[key] !== value ) { //reset active tab if type changes
+          if (key === "type" && this.state[key] !== value) { //reset active tab if type changes
             update["activeTab"] = 0;
             update["startSubCount"] = 0;
             qchanged = true;
@@ -314,7 +314,7 @@ class App extends React.Component {
               this.state.filters[key].type !== type ||
               this.state.filters[key].value !== value
             ) {
-              if (update.filters[key] !== undefined){
+              if (update.filters[key] !== undefined) {
                 update.filters[key].type = type;
                 update.filters[key].value = value;
               }
@@ -347,7 +347,7 @@ class App extends React.Component {
         update.startCount = 0;
         this.setState(update);
       } else if (
-        (qp["id"] !== undefined && this.state.id !== qp["id"]) || 
+        (qp["id"] !== undefined && this.state.id !== qp["id"]) ||
         (qp["id"] === undefined && this.state.id !== undefined) ||
         idChanged
       ) {
@@ -407,7 +407,7 @@ class App extends React.Component {
       window.location.pathname.startsWith("/meet")
     ) {
       return purple[600];
-    } else if ( type === "benchmark" ) {
+    } else if (type === "benchmark") {
       return pink[400];
     } else if (
       type === "task_type" ||
@@ -435,7 +435,7 @@ class App extends React.Component {
       case "flow":
         return "cog";
       case "run":
-        return "flask";      
+        return "flask";
       case "study":
         return "layer-group";
       case "benchmark":

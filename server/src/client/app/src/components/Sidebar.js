@@ -96,7 +96,7 @@ const BrandIcon = styled(Icon)`
   overflow: visible;
   text-align: "center";
   margin-top: -12px;
-  margin-left: 8px;
+  margin-left: 0px;
   filter: drop-shadow(1px 1px 0px rgba(255, 255, 255, 0.1));
 `;
 

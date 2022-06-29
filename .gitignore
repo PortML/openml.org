@@ -52,6 +52,8 @@ dev_data/ff\@ff.com/
 temp_data/
 
 .flaskenv
+.reactenv
+.reactenv_aws
 
 users.sql
 node_modules
