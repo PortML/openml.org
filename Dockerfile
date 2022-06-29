@@ -13,7 +13,8 @@ RUN pip3 install python-dotenv
 COPY . /app
 
 #Copy env file for correct development
-COPY ./reactenv /app/server/client/app/.env
+COPY ./.reactenv /app/.env
+COPY ./.reactenv /app/server/src/client/app/.env
 
 #Install NPM dependencies and build
 WORKDIR /server/src/client/app
